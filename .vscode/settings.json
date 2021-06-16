@@ -1,0 +1,16 @@
+{
+  "editor.formatOnSave": true,
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.codeLens": true,
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.suggest.insertMode": "replace",
+    "gitlens.codeLens.scopes": [
+      "document"
+    ]
+  }
+}
