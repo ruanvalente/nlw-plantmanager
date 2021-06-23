@@ -6,6 +6,7 @@ import {
   Image,
   TouchableOpacity,
   Platform,
+  Dimensions,
 } from "react-native";
 
 import wateringBackground from "../../assets/watering.png";
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
     paddingTop: Platform.OS === "android" ? 80 : 0,
   },
 
@@ -56,8 +57,8 @@ const styles = StyleSheet.create({
     lineHeight: 25,
   },
   wateringBackground: {
-    width: 292,
-    height: 284,
+    width: Dimensions.get('window').width * 0.7,
+    height:  Dimensions.get('window').height * 0.7
   },
   buttonWelcome: {
     width: 56,
