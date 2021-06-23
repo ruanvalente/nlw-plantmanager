@@ -3,8 +3,7 @@ import { StyleSheet, View } from "react-native";
 
 import AppLoading from "expo-app-loading";
 
-import { Welcome } from "./src/pages/Welcome";
-import { UserConfirmation } from "./src/pages/UserConfirmation";
+import Routes from "./src/routers";
 
 import {
   useFonts,
@@ -22,18 +21,5 @@ export default function App() {
     return <AppLoading />;
   }
 
-  return (
-    <View style={styles.container}>
-      <Welcome />
-    </View>
-  );
+  return <Routes />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

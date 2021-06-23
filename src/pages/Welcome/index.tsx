@@ -9,6 +9,8 @@ import {
   Dimensions,
 } from "react-native";
 
+import { useNavigation } from "@react-navigation/native";
+
 import { Feather } from "@expo/vector-icons";
 
 import wateringBackground from "../../assets/watering.png";
@@ -17,6 +19,11 @@ import colors from "../../styles/colors";
 import fonts from "../../styles/fonts";
 
 export function Welcome() {
+  const navigation = useNavigation();
+
+  function handleStart() {
+    navigation.navigate("UserConfirmation");
+  }
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>
@@ -30,7 +37,7 @@ export function Welcome() {
         você sempre{"\n"} que precisar.
       </Text>
 
-      <TouchableOpacity style={styles.buttonWelcome}>
+      <TouchableOpacity style={styles.buttonWelcome} onPress={handleStart}>
         <Feather
           name="chevron-right"
           style={{ color: colors.white, fontSize: 32 }}
