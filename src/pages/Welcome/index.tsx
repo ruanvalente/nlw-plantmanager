@@ -9,8 +9,12 @@ import {
   Dimensions,
 } from "react-native";
 
+import { Feather } from "@expo/vector-icons";
+
 import wateringBackground from "../../assets/watering.png";
+
 import colors from "../../styles/colors";
+import fonts from "../../styles/fonts";
 
 export function Welcome() {
   return (
@@ -27,7 +31,10 @@ export function Welcome() {
       </Text>
 
       <TouchableOpacity style={styles.buttonWelcome}>
-        <Text style={{ color: "white", fontWeight: "bold" }}>{">"}</Text>
+        <Feather
+          name="chevron-right"
+          style={{ color: colors.white, fontSize: 32 }}
+        />
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -42,30 +49,30 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    fontWeight: "bold",
     fontSize: 32,
     lineHeight: 38,
     textAlign: "center",
     color: colors.heading,
+    fontFamily: fonts.heading,
   },
 
   subtitle: {
     textAlign: "center",
     fontWeight: "normal",
     fontSize: 17,
+    fontFamily: fonts.text,
     color: colors.body_dark,
     lineHeight: 25,
   },
   wateringBackground: {
-    width: Dimensions.get('window').width * 0.7,
-    height:  Dimensions.get('window').height * 0.7
+    width: Dimensions.get("window").width * 0.7,
   },
   buttonWelcome: {
     width: 56,
     height: 56,
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 56,
+    marginBottom: 10,
     borderRadius: 16,
     backgroundColor: colors.green,
   },
